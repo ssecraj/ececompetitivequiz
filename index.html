@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Electrogenia</title>
+  <title>Electrogenia-2k24</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,13 +47,12 @@
     <!-- Logo -->
   <img id="logo" src="ECE-BG.jpg" alt="ECE Quiz Logo">
 
-  <div id="examText"><br><h5>Welcome to the ECE Competitive Quiz!</h5>Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024 <br>
+  <div id="examText"><br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024<br>
 
     <br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br>
-   
-    <br>Good luck!.</div>
+    <br>All The Best!.</div>
   <div id="timer">00:00:00</div>
-  <button id="startExamButton" disabled>Exam Started</button>
+  <button id="startExamButton" disabled>Start Exam</button>
 
   <script>
     // Function to convert local time to IST
@@ -65,11 +64,11 @@
     }
 
     // Set the exam start and end time for the specific date (22nd October 2024)
-    let examDate = '2024-10-22'; // Corrected to 22nd October 2024
+    let examDate = '2024-10-23'; // Corrected to 22nd October 2024
     let startTime = new Date(examDate);
     let endTime = new Date(examDate);
-    startTime.setHours(20, 20, 0, 0);  // 6:00 PM IST
-    endTime.setHours(21, 30, 0, 0);   // 7:30 PM IST
+    startTime.setHours(18, 0, 0, 0);  // 6:00 PM IST
+    endTime.setHours(19, 30, 0, 0);   // 7:30 PM IST
 
     // Function to check if the current time is within the exam time window
     function checkExamTime() {
@@ -80,11 +79,11 @@
         if (nowIST >= startTime && nowIST <= endTime) {
           // Between 6:00 PM and 7:30 PM: Enable the button and hide the timer
           document.getElementById("timer").style.display = "none";
-          document.getElementById("examText").innerHTML = "Exam started";
+          document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024 <br><br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br><br>Exam started";
           document.getElementById("startExamButton").disabled = false;
         } else if (nowIST > endTime) {
           // After 7:30 PM: Disable the button and show the "Exam time over" message
-          document.getElementById("examText").innerHTML = "Exam time over";
+          document.getElementById("examText").innerHTML = "<br><h5>Sorry, this exam is already over. You missed the Scheduled time</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024 <br><br>Exam time over";
           document.getElementById("startExamButton").disabled = true;
         } else {
           // Before 6:00 PM: Show the countdown and keep the button disabled
@@ -92,7 +91,7 @@
         }
       } else {
         // If today is not 22nd October 2024, show that the exam is not available
-        document.getElementById("examText").innerHTML = "The exam is only on 23st October 2024.";
+        document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits<br><br>The exam is only on 23.10.2024.";
         document.getElementById("startExamButton").disabled = true;
         document.getElementById("timer").style.display = "none";
       }
@@ -126,7 +125,7 @@
     }
 
     // Add click event listener to the button
-    document.getElementById("startExamButton").addEventListener("click", Start Exam);
+    document.getElementById("startExamButton").addEventListener("click", startExam);
 
     // Initial check on page load
     checkExamTime();
