@@ -79,7 +79,7 @@
         if (nowIST >= startTime && nowIST <= endTime) {
           // Between 6:00 PM and 7:30 PM: Enable the button and hide the timer
           document.getElementById("timer").style.display = "none";
-          document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024 <br><br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br><br>Exam started";
+          document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024 <br><br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br><br>Exam started<br>All The Best!";
           document.getElementById("startExamButton").disabled = false;
         } else if (nowIST > endTime) {
           // After 7:30 PM: Disable the button and show the "Exam time over" message
