@@ -47,7 +47,7 @@
     <!-- Logo -->
   <img id="logo" src="ECE-BG.jpg" alt="ECE Quiz Logo">
 
-  <div id="examText"><br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024<br>
+  <div id="examText"><br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Transient Analysis and Two-Port Networks - 25.10.2024<br>
 
     <br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br>
     <br>All The Best!.</div>
@@ -64,7 +64,7 @@
     }
 
     // Set the exam start and end time for the specific date (22nd October 2024)
-    let examDate = '2024-10-23'; // Corrected to 22nd October 2024
+    let examDate = '2024-10-25'; // Corrected to 22nd October 2024
     let startTime = new Date(examDate);
     let endTime = new Date(examDate);
     startTime.setHours(18, 0, 0, 0);  // 6:00 PM IST
@@ -79,11 +79,11 @@
         if (nowIST >= startTime && nowIST <= endTime) {
           // Between 6:00 PM and 7:30 PM: Enable the button and hide the timer
           document.getElementById("timer").style.display = "none";
-          document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024 <br><br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br><h3>Exam started</h3>All The Best!";
+          document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Transient Analysis and Two-Port Networks - 25.10.2024 <br><br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br><h3>Exam started</h3>All The Best!";
           document.getElementById("startExamButton").disabled = false;
         } else if (nowIST > endTime) {
           // After 7:30 PM: Disable the button and show the "Exam time over" message
-          document.getElementById("examText").innerHTML = "<br><h5>Sorry, this exam is already over. You missed the Scheduled time</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits - 23.10.2024 <br><h3>Exam time over</h3>";
+          document.getElementById("examText").innerHTML = "<br><h5>Sorry, this exam is already over. You missed the Scheduled time</h5>Topic: Circuit Analysis - Transient Analysis and Two-Port Networks Circuits - 25.10.2024 <br><h3>Exam time over</h3>";
           document.getElementById("startExamButton").disabled = true;
         } else {
           // Before 6:00 PM: Show the countdown and keep the button disabled
@@ -91,7 +91,7 @@
         }
       } else {
         // If today is not 22nd October 2024, show that the exam is not available
-        document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Network Theorems, Resonance and Coupled Circuits<br><br>The exam is only on 23.10.2024.";
+        document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Circuit Analysis - Transient Analysis and Two-Port Networks<br><br>The exam is only on 25.10.2024.";
         document.getElementById("startExamButton").disabled = true;
         document.getElementById("timer").style.display = "none";
       }
@@ -121,7 +121,7 @@
 
     // Function to handle button click and redirect to Google
     function startExam() {
-      window.location.href = "https://forms.gle/BM4k4AZNLaYzVj5YA"; // Redirects to Google in the same tab
+      window.location.href = "https://forms.gle/juQPokmRrLAYEnU3A"; // Redirects to Google in the same tab
     }
 
     // Add click event listener to the button
