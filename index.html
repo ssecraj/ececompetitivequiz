@@ -49,7 +49,7 @@
 
   <div id="examText"><br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Electronic Devices and Circuits - Semiconductor Devices, Amplifiers, Multistage and differential amplifiers - 05.11.2024<br>
 
-    <br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br>
+    <br>Please note that the form is active only between 6:00 PM to 9:30 PM.<br>
     <br>All The Best!.</div>
   <div id="timer">00:00:00</div>
   <button id="startExamButton" disabled>Start Exam</button>
@@ -79,7 +79,7 @@
         if (nowIST >= startTime && nowIST <= endTime) {
           // Between 6:00 PM and 7:30 PM: Enable the button and hide the timer
           document.getElementById("timer").style.display = "none";
-          document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Electronic Devices and Circuits - Semiconductor Devices, Amplifiers, Multistage and differential amplifiers - 05.11.2024 <br><br>Please note that the form is active only between 6:00 PM to 7:30 PM.<br><h3>Exam started</h3>All The Best!";
+          document.getElementById("examText").innerHTML = "<br><h5>Welcome to the Dept of ECE<br>Competitive Quiz!</h5>Topic: Electronic Devices and Circuits - Semiconductor Devices, Amplifiers, Multistage and differential amplifiers - 05.11.2024 <br><br>Please note that the form is active only between 6:00 PM to 9:30 PM.<br><h3>Exam started</h3>All The Best!";
           document.getElementById("startExamButton").disabled = false;
         } else if (nowIST > endTime) {
           // After 7:30 PM: Disable the button and show the "Exam time over" message
